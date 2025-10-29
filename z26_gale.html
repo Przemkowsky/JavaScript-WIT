@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 26</title>
+</head>
+<body>
+
+<form onsubmit="Pow_galeziowski(); Obw_galeziowski(); return false">
+
+    górna podstawa=<input type="text" id="gora" size="8"><br><br><br>
+    dolna podstawa=<input type="text" id="dol" size="8"><br><br><br>
+    wysokość=<input type="text" id="wysokosc" size="8"><br><br><br>
+    <input type="submit" value="oblicz"><br><br>
+    pole=<input type="text" readonly id="pole" size="5"><br><br>
+    obwód=<input type="text" readonly id="obwod" size="5"><br><br>
+</form>
+
+<script>
+
+function Pow_galeziowski() {
+    let a = parseFloat(document.getElementById("gora").value);
+    let b = parseFloat(document.getElementById("dol").value);
+    let h = parseFloat(document.getElementById("wysokosc").value);
+
+    if (isNaN(a) || isNaN(b) || isNaN(h)) return;
+    document.getElementById("pole").value = (((a + b) * h) / 2).toFixed(2);
+}
+
+
+
+function Obw_galeziowski() {
+    let a = parseFloat(document.getElementById("gora").value);
+    let b = parseFloat(document.getElementById("dol").value);
+    let h = parseFloat(document.getElementById("wysokosc").value);
+
+    if (isNaN(a) || isNaN(b) || isNaN(h)) return;
+
+    let r = Math.abs(a - b) / 2; 
+
+    let ramie = Math.sqrt(Math.pow(r, 2) + Math.pow(h, 2));
+
+    document.getElementById("obwod").value = (a + b + 2 * ramie).toFixed(2);
+}
+
+// Przemysław Gałęziowski 2P
+
+</script>
+</body>
+</html>

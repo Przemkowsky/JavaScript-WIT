@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 27</title>
+</head>
+<body>
+
+<form onsubmit="oblicz(); return false;">
+  Odległość Artura od Dawida: <input type="text" id="odl_gale" size="4"><br>
+  Droga przebyta przez samolot nad Dawidem: <input type="text" id="s_gale" size="4"><br><br>
+  <input type="submit" value="oblicz"><br><br>
+  Wysokość = <input type="text" readonly id="wysokosc" size="6"><br>
+  Kąt = <input type="text" readonly id="kat" size="6"><br>
+</form>
+
+<script>
+function oblicz() {
+    let odl_gale = parseFloat(document.getElementById("odl_gale").value);
+    let s_gale = parseFloat(document.getElementById("s_gale").value);
+
+    if (isNaN(odl_gale) || isNaN(s_gale) || s_gale <= odl_gale) {
+      alert("Podaj poprawne dane (s > odl).");
+      return;
+    }
+
+    let kat = Kat(s_gale, odl_gale);
+    let h = Wys(s_gale, kat);
+
+    document.getElementById("kat").value = kat.toFixed(2);
+    document.getElementById("wysokosc").value = h.toFixed(2);
+    }
+
+    function Kat(s_gale, odl_gale) {
+      return Math.asin(odl_gale / s_gale) * 180 / Math.PI;
+    }
+
+    function Wys(s_gale, kat) {
+      return s_gale * Math.sin(kat * Math.PI / 180);
+    }
+    // Przemysław Gałęziowski 2P
+</script>
+</body>
+</html>
