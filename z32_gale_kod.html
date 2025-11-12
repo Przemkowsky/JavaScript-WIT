@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Zadanie 32 - kod</title>
+    </head>
+    <body>
+        <center>
+        <h1>Zadanie 32 kod: </h1>
+        <textarea readonly rows="28" cols="81"><html>
+    <head>
+        <script type="text/javascript">
+            function wazon(kolor_g,wiek_g,cena_g) {
+                this.kolor=kolor_g;
+                this.wiek=wiek_g;
+                this.cena=cena_g;
+            }
+
+            wazon.prototype.wypisz = function () {
+                alert(this.kolor + ' ' + this.wiek + ' ' + this.cena);
+            };
+            let wazon1 = new wazon("Fioletowy", "805 lat", "642m zł");
+            let wazon2 = new wazon("Czerwony", "147 lat", "189 tyś zł");
+            let wazon3 = new wazon("Różowy", "4 lat", "15 zł");
+            wazon1.wypisz();
+            wazon2.wypisz();
+            wazon3.wypisz();
+            document.write("dostęp do właściwości"+"<br>");
+            document.write("wazon pierwszy"+"  "+wazon1.kolor+"  "+wazon1.wiek+"  "+wazon1.cena+"<br>");
+            document.write("wazon drugi"+"  "+wazon2.kolor+"  "+wazon2.wiek+"  "+wazon2.cena+"<br>");
+            document.write("wazon trzeci"+"  "+wazon3.kolor+"  "+wazon3.wiek+"  "+wazon3.cena+"<br>");
+        
+
+            wazon.prototype.kraj = "Japonia";
+            wazon.prototype.wazon_pokaz_galeziowski = function() {
+                alert("Kraj pochodzenia: " + this.kraj);
+            };
+
+            wazon1.wazon_pokaz_galeziowski();
+            wazon2.wazon_pokaz_galeziowski();
+            wazon3.wazon_pokaz_galeziowski();
+
+        </script>
+    </head>
+    <body> 
+ <br> 
+   programowanie obiektowe
+</body>
+</html>    </textarea>
+        </center>
+    </body>
+</html>
+
