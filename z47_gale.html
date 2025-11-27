@@ -7,18 +7,16 @@
 <div style="color:red;font-size:50px;"> 
 <script language="JavaScript"> 
 do { 
-var liczba1=prompt("wysokość=",""); 
-var h=parseFloat(liczba1); 
+var liczba1=prompt("a="," "); 
+var a_gal=parseFloat(liczba1); 
+var liczba2=prompt("b="," "); 
+var b_gal=parseFloat(liczba2); 
+var liczba3=prompt("c="," "); 
+var c_gal=parseFloat(liczba3); 
 } 
-while ( h<=0); 
-do { 
-var liczba1=prompt("podstawę=",""); 
-var a=parseFloat(liczba1); 
-while(!( a>0));
-} 
-while(!( a>0)); 
-var Pole=a*h/2; 
-document.write("Pole="+Pole.toFixed(2)+" cm^2"+"<br>"); 
+while 
+(!((a_gal<b_gal+c_gal)&&(b_gal<a_gal+c_gal)&&(c_gal<a_gal+b_gal)&&(a_gal>0)&&(b_gal>0)&&(c_gal>0)));
+document.write("Boki: " +a_gal+" "+b_gal+" "+c_gal+"<br>");  
 </script> 
 </div> 
 </body> 
