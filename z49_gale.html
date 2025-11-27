@@ -1,0 +1,27 @@
+<!DOCTYPE html>   
+<head>    
+<title>Sprawdzenie danych Twoje nazwisko </title>    
+<meta charset="utf-8">   
+</head>  
+<body> 
+<div style="color:red;font-size:50px;"> 
+<script language="JavaScript"> 
+do { 
+var liczba1=prompt("n="," "); 
+var n_gal=parseFloat(liczba1); 
+} 
+while  (n_gal<0);
+if(n_gal==0) {
+    silnia_gal=1;
+
+}
+if(n_gal>0) {
+    silnia_gal=1;
+    for(i_gal=1;i_gal<-n_gal;i_gal++){
+        silnia_gal=silnia_gal*i_gal;
+    }
+ } document.write("n="+n_gal+"<br>"+n_gal+"!="+silnia_gal);
+</script> 
+</div> 
+</body> 
+</html> 
