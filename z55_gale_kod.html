@@ -1,36 +1,57 @@
 <html>
     <head>
-        <title>Zadanie 35 - kod</title>
+        <title>Zadanie 55 - kod</title>
     </head>
     <body>
         <center>
-        <h1>Zadanie 35 kod: </h1>
-        <textarea readonly rows="33" cols="81"><html lang="pl"> 
-    <head>
-        <meta charset="utf-8">
-        <title>Zadanie 35</title>
-    </head>
- <body> 
- <div style="color:red;font-size:50px;"> 
-    <script language="JavaScript"> 
-  var x=prompt("podaj liczbę x=",""); 
-      
-               var a_dana_gale=parseFloat(x); 
-    document.write("czytana liczba x="+a_dana_gale+"<br>");     
-    if(a_dana_gale>0) 
-    {document.write("wczytana liczba jest większa od 0"+"<br>");} 
-    if(a_dana_gale==0) {
-        document.write("wczytana liczba jest równa zero <br>");
-    }
-      
-    if(a_dana_gale<0){
-        document.write("wczytana liczba jest mniejsza od 0 <br>");
-    }
-      //Gałęziowski Przemysław 2P
-    </script> 
- </div> 
- </body> 
-</html> </textarea>
+        <h1>Zadanie 55 kod: </h1>
+        <textarea readonly rows="33" cols="81"><!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 55</title>
+    <script language="JavaScript">
+        do {
+            var l1_t_gal = prompt("Podaj pierwszą liczbę z przedziału <20,60>:");
+            l1_t_gal = parseInt(l1_t_gal);
+            if(l1_t_gal < 20 || l1_t_gal > 60) {
+                alert("Liczba l1 nie należy do przedziału <20,60>");
+            }
+        } while(l1_t_gal < 20 || l1_t_gal > 60);
+        
+        do {
+            var l2_t_gal = prompt("Podaj drugą liczbę z przedziału <20,60>:");
+            l2_t_gal = parseInt(l2_t_gal);
+            if(l2_t_gal < 20 || l2_t_gal > 60) {
+                alert("Liczba l2 nie należy do przedziału <20,60>");
+            }
+        } while(l2_t_gal < 20 || l2_t_gal > 60);
+        
+        var pocz_gal = prompt("Podaj początkową wielkość tekstu:");
+        pocz_gal = parseInt(pocz_gal);
+        
+        var tekst_gal = prompt("Podaj dowolny tekst:");
+        
+        var i_gal = pocz_gal;
+        
+        if(l1_t_gal < l2_t_gal) {
+            while(i_gal <= 100) {
+                document.write("<p style=\"font-size:" + i_gal + "px; color: black;\">" + tekst_gal + "</p>");
+                i_gal += 5;
+            }
+        } else if(l2_t_gal < l1_t_gal) {
+            while(i_gal >= 0) {
+                document.write("<p style=\"font-size:" + i_gal + "px; color: black;\">" + tekst_gal + "</p>");
+                i_gal -= 5;
+            }
+        } else {
+            document.write("<p style=\"font-size:" + i_gal + "px; color: black;\">" + tekst_gal + "</p>");
+        }
+    </script>
+</head>
+<body>
+</body>
+</html></textarea>
         </center>
     </body>
 </html>
