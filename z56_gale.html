@@ -1,25 +1,25 @@
-<!DOCTYPE html> 
-<html lang="pl"> 
-<head>  
-   <meta charset="utf-8"> 
-    <title>  Przykład użycia pętli </title> 
-  <script language="JavaScript"> 
-  document.writeln("&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspb");
-  document.writeln("<br>");
-   for ( var i=0; i<=24; i++) 
-    { 
-       document.write("*"); 
-     } 
-     document.writeln("<br>");
-     for (var i=0; i<=5;i++){
-        document.writeln("*&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp*<br>");
-     }
-     for ( var i=0; i<=24; i++) 
-    { 
-       document.write("*"); 
-     } 
-  </script> 
-</head>  
-<body>  
-</body>  
-</html> 
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 56</title>
+    <script language="JavaScript">
+        document.write("w(i) = i<sup>2</sup> + i + 41<br><br>");
+        
+        var licznik_gal = 0;
+        
+        for(var i_gal = 0; i_gal < 40; i_gal++) {
+            var w_gal = i_gal * i_gal + i_gal + 41;
+            document.write("i=" + i_gal + " w(" + i_gal + ")=" + w_gal + "<br>");
+            
+            licznik_gal++;
+            if(licznik_gal == 5) {
+                document.write("<br>");
+                licznik_gal = 0;
+            }
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
