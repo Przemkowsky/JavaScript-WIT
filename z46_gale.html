@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sprawdzenie danych Gałęziowski</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<div style="color:red;font-size:50px;">
+    <script language="JavaScript">
+        do {
+            var liczba1_gal = prompt("wysokość=","");
+            var h_gal = parseFloat(liczba1_gal);
+        }
+        while (h_gal <= 0);
+        
+        do {
+            var liczba2_gal = prompt("podstawę=","");
+            var a_gal = parseFloat(liczba2_gal);
+        }
+        while(!(a_gal > 0));
+        
+        var Pole_gal = a_gal * h_gal / 2;
+        document.write("Pole=" + Pole_gal.toFixed(2) + " cm^2" + "<br>");
+    </script>
+</div>
+</body>
+</html>
