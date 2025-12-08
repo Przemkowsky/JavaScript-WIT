@@ -1,23 +1,24 @@
-<!DOCTYPE html>   
-<head>    
-<title>Sprawdzenie danych Twoje nazwisko </title>    
-<meta charset="utf-8">   
-</head>  
-<body> 
-<div style="color:red;font-size:50px;"> 
-<script language="JavaScript"> 
-do { 
-var liczba1=prompt("a="," "); 
-var a_gal=parseFloat(liczba1); 
-var liczba2=prompt("b="," "); 
-var b_gal=parseFloat(liczba2); 
-var liczba3=prompt("c="," "); 
-var c_gal=parseFloat(liczba3); 
-} 
-while 
-(!((a_gal<b_gal+c_gal)&&(b_gal<a_gal+c_gal)&&(c_gal<a_gal+b_gal)&&(a_gal>0)&&(b_gal>0)&&(c_gal>0)));
-document.write("Boki: " +a_gal+" "+b_gal+" "+c_gal+"<br>");  
-</script> 
-</div> 
-</body> 
-</html> 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sprawdzenie danych Gałęziowski</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<div style="color:red;font-size:50px;">
+    <script language="JavaScript">
+        do {
+            var liczba1_gal = prompt("a="," ");
+            var a_gal = parseFloat(liczba1_gal);
+            var liczba2_gal = prompt("b="," ");
+            var b_gal = parseFloat(liczba2_gal);
+            var liczba3_gal = prompt("c="," ");
+            var c_gal = parseFloat(liczba3_gal);
+        }
+        while (!((a_gal < b_gal + c_gal) && (b_gal < a_gal + c_gal) && (c_gal < a_gal + b_gal) && (a_gal > 0) && (b_gal > 0) && (c_gal > 0)));
+        
+        document.write("Boki: " + a_gal + " " + b_gal + " " + c_gal + "<br>");
+    </script>
+</div>
+</body>
+</html>
