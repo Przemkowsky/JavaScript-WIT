@@ -1,19 +1,20 @@
-<!DOCTYPE html> 
-<html lang="pl"> 
-<head>  
-   <meta charset="utf-8"> 
-    <title>  Przykład użycia pętli </title> 
-  <script language="JavaScript"> 
-   for ( var i=1; i<=10; i++) 
-    { 
-       for ( var g=1; g<=i; g++) 
-        { 
-           document.write("&nbsp");     
-         } 
-         document.write(i+"<br>"); 
-     } 
-  </script> 
-</head>  
-<body>  
-</body>  
-</html> 
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Przykład użycia pętli</title>
+</head>
+<body>
+    <script language="JavaScript">
+        document.write("<div style='color:red;font-size:2cm;'>Gałęziowski</div>");
+        document.write("<div style='color:blue;font-size:5mm;'>Wyprowadzanie liczb od 1 do 10 przesuniętych o jedną spację w prawo. Demonstarcja pętli zagnieżdżonych (czyli pętla w pętli).</div><br>");
+        
+        for (var i_gal = 1; i_gal <= 10; i_gal++) {
+            for (var k_gal = 1; k_gal <= i_gal; k_gal++) {
+                document.write("&nbsp;");
+            }
+            document.write(i_gal + "<br>");
+        }
+    </script>
+</body>
+</html>
