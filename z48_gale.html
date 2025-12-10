@@ -1,18 +1,16 @@
-<!DOCTYPE html>   
-<head>    
-<title> Gałęziowski 2P </title>    
-<meta charset="utf-8">   
-</head>  
-<body> 
-<div style="color: red;font-size: 50px;">
-    <script language="JavaScript">
-        var suma_gal=0;
-        for (i_gal=1;i_gal<=1000000;i_gal++) {
-            suma_gal=suma_gal+1/i_gal;
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 48</title>
+</head>
+<body style="color: red; font-size: 50px;">
+    <script>
+        let suma_gal = 0;
+        for (i_gal = 1; i_gal < 1000000; i_gal++){
+            suma_gal = suma_gal + (1/i_gal);
         }
-        document.write("suma= "+suma_gal.toFixed(2)+"<br>")
-
-</script>
-</div>
-</body> 
+        document.write("Suma = " + suma_gal);
+    </script>
+</body>
 </html>
