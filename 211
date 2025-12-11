@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="uft-8">
+    <meta charset="utf-8">
     <title>Przemysław Gałęziowski Sprawdzian JS</title>
 </head>
 <body style="color: green; font-size: 2cm;">
+
 <script>  
+
 var a_gal = parseFloat(prompt("Podaj a:"));
 var b_gal = parseFloat(prompt("Podaj b:"));
 var c_gal = parseFloat(prompt("Podaj c:"));
+
 var delta_gal = b_gal*b_gal - 4*a_gal*c_gal;
+
 var x1_gal = "Brak miejsc zerowych";
-var x2_gal = "Brak mijesc zerowych";
+var x2_gal = "Brak miejsc zerowych";
+
+// miejsca zerowe
 if (delta_gal > 0) {
     x1_gal = ((-b_gal - Math.sqrt(delta_gal)) / (2*a_gal)).toFixed(2);
     x2_gal = ((-b_gal + Math.sqrt(delta_gal)) / (2*a_gal)).toFixed(2);
-} else if (delta_gal === 0) {
+} 
+else if (delta_gal === 0) {
     x1_gal = (-b_gal / (2*a_gal)).toFixed(2);
     x2_gal = x1_gal;
 }
+
 var p_gal = (-b_gal / (2*a_gal)).toFixed(2);
 var q_gal = (-delta_gal / (4*a_gal)).toFixed(2);
-var x0_gal = p_gal;
-var postac_kanoniczna_gal =
+
+// wierzchołek = współrzędne (p,q), NIE ich iloczyn!
+var wierzcholek_gal = "W(" + p_gal + ", " + q_gal + ")";
+
+var postac_kanoniczna_gal = 
     "f(x) = " + a_gal.toFixed(2) + "(x - " + p_gal + ")^2 + " + q_gal;
 
 var postac_iloczynowa_gal = "Brak (delta < 0)";
@@ -32,24 +43,36 @@ if (delta_gal > 0) {
 }
 if (delta_gal === 0) {
     postac_iloczynowa_gal =
-        "f(x) = " + a_gal.toFixed(2) + "(x - " + x0_gal + ")^2";
+        "f(x) = " + a_gal.toFixed(2) + "(x - " + x1_gal + ")^2";
 }
-var wierzcholek_gal = p_gal*q_gal;
-//Przemysław Gałęziowski 2P G1
+
+// ---- WYŚWIETLANIE ----
+
 document.write("<h2>Wyniki</h2>");
 document.write("a_gal = " + a_gal.toFixed(2) + "<br>");
 document.write("b_gal = " + b_gal.toFixed(2) + "<br>");
 document.write("c_gal = " + c_gal.toFixed(2) + "<br><br><br>");
+
 document.write("Delta = " + delta_gal.toFixed(2) + "<br><br><br>");
+
 document.write("Miejsce zerowe x1_gal = " + x1_gal + "<br>");
 document.write("Miejsce zerowe x2_gal = " + x2_gal + "<br>");
-document.write("Miejece zerowe x0_gal = " + x0_gal + "<br><br><br>");
+
+// x0 tylko gdy Δ = 0
+if (delta_gal === 0) {
+    document.write("Miejsce zerowe x0_gal = " + x1_gal + "<br><br><br>");
+}
+
 document.write("p_gal = " + p_gal + "<br>");
 document.write("q_gal = " + q_gal + "<br><br><br>");
-document.write("Wierzchołek = " + wierzcholek_gal.toFixed(2) + "<br><br>");
+
+document.write("Wierzchołek = " + wierzcholek_gal + "<br><br>");
+
 document.write("<h2>Postać iloczynowa wynosi:</h2><br>" + postac_iloczynowa_gal + "<br><br>");
+
 document.write("<h2>Postać kanoniczna wynosi:</h2><br>" + postac_kanoniczna_gal + "<br><br>");
 
 </script>
+
 </body>
 </html>
