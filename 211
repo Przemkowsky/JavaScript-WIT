@@ -26,14 +26,11 @@ function licz_gal() {
     document.write("<div style='color: green; font-size: 2cm;'>");
     document.write("<h2>Wyniki</h2>");
 
-    // --- Wzór ---
     document.write("f(x) = " + a_gal + "x² + " + b_gal + "x + " + c_gal + "<br><br>");
 
-    // --- Delta ---
     var delta_gal = b_gal*b_gal - 4*a_gal*c_gal;
     document.write("Delta = " + delta_gal + "<br><br>");
 
-    // --- Miejsca zerowe ---
     var x1_gal = "Brak";
     var x2_gal = "Brak";
 
@@ -49,17 +46,14 @@ function licz_gal() {
     document.write("x1 = " + x1_gal + "<br>");
     document.write("x2 = " + x2_gal + "<br><br>");
 
-    // --- p, q ---
     var p_gal = (-b_gal / (2*a_gal)).toFixed(2);
     var q_gal = (-delta_gal / (4*a_gal)).toFixed(2);
 
     document.write("p = " + p_gal + "<br>");
     document.write("q = " + q_gal + "<br><br>");
 
-    // --- Wierzchołek ---
-    document.write("W = (" + p_gal + ", " + q_gal + ")<br><br>");
+    document.write("Wierzchołek = (" + p_gal + ", " + q_gal + ")<br><br>");
 
-    // --- Monotoniczność ---
     if(a_gal > 0){
         document.write("Funkcja maleje w (-∞, " + p_gal + "]<br>");
         document.write("Funkcja rośnie w [" + p_gal + ", ∞)<br><br>");
@@ -69,17 +63,12 @@ function licz_gal() {
         document.write("Funkcja maleje w [" + p_gal + ", ∞)<br><br>");
     }
 
-    // --- f(10) ---
-    var f10_gal = (a_gal*100) + (b_gal*10) + c_gal;
-    document.write("f(10) = " + f10_gal + "<br><br>");
 
-    // --- Postać kanoniczna ---
     var postac_kanon_gal =
         "f(x) = " + a_gal + "(x - " + p_gal + ")² + " + q_gal;
 
     document.write("Postać kanoniczna: " + postac_kanon_gal + "<br><br>");
 
-    // --- Postać iloczynowa ---
     if(delta_gal > 0){
         document.write("Postać iloczynowa: f(x) = " + a_gal +
                        "(x - " + x1_gal + ")(x - " + x2_gal + ")<br>");
