@@ -1,72 +1,40 @@
-public class GraWideo {
-    // pola (private!)
-    private String tytul;
-    private int rokWydania;
-    private double cena;
-    private boolean czyMultiplayer;
+public class KolekcjaGier {
+    private GraWideo[] gry;
 
-    // konstruktor domyślny
-    public GraWideo() {
-        this.tytul = "Nieznana gra";
-        this.rokWydania = 2000;
-        this.cena = 100.0;
-        this.czyMultiplayer = false;
+    // konstruktor
+    public KolekcjaGier() {
+        gry = new GraWideo[5];
+
+        gry[0] = new GraWideo("Wiedzmin 3", 2015, 120, true);
+        gry[1] = new GraWideo("Cyberpunk 2077", 2020, 200, true);
+        gry[2] = new GraWideo("Minecraft", 2011, 100, true);
+        gry[3] = new GraWideo("FIFA 23", 2022, 250, true);
+        gry[4] = new GraWideo("GTA V", 2013, 150, true);
     }
 
-    // konstruktor parametryczny
-    public GraWideo(String tytul, int rokWydania, double cena, boolean czyMultiplayer) {
-        this.tytul = tytul;
-        this.rokWydania = rokWydania;
-        this.cena = cena;
-        this.czyMultiplayer = czyMultiplayer;
-    }
-
-    // GETTERY I SETTERY
-
-    public String getTytul() {
-        return tytul;
-    }
-
-    public void setTytul(String tytul) {
-        this.tytul = tytul;
-    }
-
-    public int getRokWydania() {
-        return rokWydania;
-    }
-
-    public void setRokWydania(int rokWydania) {
-        if (rokWydania > 2026) {
-            System.out.println("Błąd: rok wydania nie może być z przyszłości!");
-            this.rokWydania = 2000;
-        } else {
-            this.rokWydania = rokWydania;
+    // wyświetlanie wszystkich gier
+    public void wyswietlWszystko() {
+        for (GraWideo g : gry) {
+            System.out.println("Tytuł: " + g.getTytul());
+            System.out.println("Rok wydania: " + g.getRokWydania());
+            System.out.println("Cena: " + g.getCena());
+            System.out.println("Multiplayer: " + g.isCzyMultiplayer());
+            System.out.println("----------------------");
         }
     }
 
-    public double getCena() {
-        return cena;
-    }
+    // metoda analityczna – najdroższa gra
+    public void znajdzNajdrozsza() {
+        double max = gry[0].getCena();
+        String tytul = gry[0].getTytul();
 
-    public void setCena(double cena) {
-        if (cena < 0) {
-            System.out.println("Błąd: cena nie może być ujemna!");
-            this.cena = 0;
-        } else {
-            this.cena = cena;
+        for (GraWideo g : gry) {
+            if (g.getCena() > max) {
+                max = g.getCena();
+                tytul = g.getTytul();
+            }
         }
-    }
 
-    public boolean isCzyMultiplayer() {
-        return czyMultiplayer;
-    }
-
-    public void setCzyMultiplayer(boolean czyMultiplayer) {
-        this.czyMultiplayer = czyMultiplayer;
-    }
-
-    // metoda biznesowa (np. cena po rabacie 10%)
-    public double cenaZRabatem() {
-        return cena * 0.9;
+        System.out.println("Najdroższa gra: " + tytul + " - " + max + " zł");
     }
 }
